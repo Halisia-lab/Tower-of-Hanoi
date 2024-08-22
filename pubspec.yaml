@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   audioplayers: ^5.2.1
+  animated_splash_screen: ^1.3.0
 
 dev_dependencies:
   flutter_test:
@@ -61,18 +62,20 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - sounds/win.mp3
-     - images/land.png
-     - images/background.avif
-     - images/background_light.webp
-     - images/empty_tower.png
-     - images/tree_stick.webp
-     - images/waterfall.jpeg
-     - images/city.jpeg
-     - images/city2.jpeg
-     - images/poteau.jpeg
-     - images/poteau.png
-     - images/window.webp
+     - assets/sounds/win.mp3
+     - assets/images/land.png
+     - assets/images/background.avif
+     - assets/images/background_light.webp
+     - assets/images/empty_tower.png
+     - assets/images/tree_stick.webp
+     - assets/images/waterfall.jpeg
+     - assets/images/city.jpeg
+     - assets/images/city2.jpeg
+     - assets/images/poteau.jpeg
+     - assets/images/poteau.png
+     - assets/images/window.webp
+     - assets/images/splash_screen.png
+     - assets/animations/splash_animation.json
 
 
   #   - images/a_dot_ham.jpeg

@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/halisia/Desktop/Developpement/projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/audioplayers_darwin.build/module.modulemap \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/audioplayers_darwin.build/module.modulemap \
   /Users/halisia/.pub-cache/hosted/pub.dev/audioplayers_darwin-5.0.2/ios/Classes/AudioplayersDarwinPlugin.m \
-  /Users/halisia/Desktop/Developpement/projects/hanoi/hanoi_tower/ios/Pods/Target\ Support\ Files/audioplayers_darwin/audioplayers_darwin-prefix.pch \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Target\ Support\ Files/audioplayers_darwin/audioplayers_darwin-prefix.pch \
   /Users/halisia/.pub-cache/hosted/pub.dev/audioplayers_darwin-5.0.2/ios/Classes/AudioplayersDarwinPlugin.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Modules/module.modulemap \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/Flutter.h \
@@ -20,4 +20,4 @@ dependencies: \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/FlutterViewController.h \
-  /Users/halisia/Desktop/Developpement/projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/audioplayers_darwin/audioplayers_darwin.framework/Headers/audioplayers_darwin-Swift.h
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/audioplayers_darwin/audioplayers_darwin.framework/Headers/audioplayers_darwin-Swift.h

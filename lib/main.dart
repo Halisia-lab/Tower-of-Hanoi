@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:hanoi_tower/components/splash_screen.dart';
 import 'dart:math';
 import 'dart:core';
 import 'components/stick.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    initialRoute: '/splash',
+    routes: {
+      '/splash': (context) => const SplashScreen(),
+      '/home': (context) => const MyApp(),
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -135,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/city.jpeg"),
+            image: AssetImage("assets/images/city.jpeg"),
             opacity: 0.7,
             fit: BoxFit.cover,
           ),
@@ -267,7 +274,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                       decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(
-                                "images/window.webp",
+                                "assets/images/window.webp",
                               ),
                               fit: BoxFit.fitHeight)),
                       child: Center(

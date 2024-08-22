@@ -59,7 +59,7 @@ class _StickState extends State<Stick> {
                   children: [
                     SizedBox(
                    height:  500,
-                      child: Image.asset("images/poteau.png", fit:BoxFit.cover),
+                      child: Image.asset("assets/images/poteau.png", fit:BoxFit.cover),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom:25),
