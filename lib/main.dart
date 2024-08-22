@@ -40,7 +40,7 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-int initialDiskNumber = 7;
+int initialDiskNumber = 3;
 final stopwatch = Stopwatch();
 
 class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
@@ -59,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
       destination.diskNumbers.add(diskNumber);
       destination.diskNumbers.sort((a, b) => a.compareTo(b));
       source.diskNumbers.removeWhere((element) => element == diskNumber);
+      playClickSound();
     });
   }
 
@@ -106,9 +107,15 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
     });
   }
 
-  playSound() async {
+  playWinSound() async {
     final player = AudioPlayer();
-    await player.play(AssetSource("sounds/win.mp3"),
+    await player.play(AssetSource("sounds/win2.mp3"),
+        mode: PlayerMode.mediaPlayer);
+  }
+
+  playClickSound() async {
+    final player = AudioPlayer();
+    await player.play(AssetSource("sounds/click.mp3"),
         mode: PlayerMode.mediaPlayer);
   }
 
@@ -139,12 +146,13 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
     );
 
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 1,21,48),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/city.jpeg"),
-            opacity: 0.7,
-            fit: BoxFit.cover,
+            image: AssetImage("assets/images/city2.jpeg"),
+            opacity: 0.3,
+            fit: BoxFit.fill,
           ),
         ),
         height: MediaQuery.of(context).size.height,
@@ -165,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
             ),
             if (stick3.diskNumbers.length == initialDiskNumber)
               FutureBuilder(
-                  future: playSound(),
+                  future: playWinSound(),
                   builder: (context, snapshot) {
                     if (underBestCounter()) {
                       snapshot.data;
@@ -262,7 +270,8 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                           surfaceTintColor:
                               MaterialStateProperty.all(Colors.white),
                           foregroundColor: MaterialStateProperty.all(
-                              Color.fromARGB(255, 167, 112, 3)),
+                              Color.fromARGB(255, 152,83,56),
+                              ),
                           minimumSize:
                               MaterialStateProperty.all(const Size(50, 50))),
                       child: Icon(gamePaused ? Icons.play_arrow : Icons.pause),
@@ -276,10 +285,12 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                               image: AssetImage(
                                 "assets/images/window.webp",
                               ),
-                              fit: BoxFit.fitHeight)),
+                              fit: BoxFit.fitHeight)
+                          ),
                       child: Center(
                         child: Text(
-                          "${counter.toString()} / ${bestCounter.toString()}",
+                         // "${counter.toString()}",
+                           "${counter.toString()} / ${bestCounter.toString()}",
                           style: const TextStyle(
                               fontSize: 40,
                               fontWeight: FontWeight.bold,
@@ -296,7 +307,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                           surfaceTintColor:
                               MaterialStateProperty.all(Colors.white),
                           foregroundColor: MaterialStateProperty.all(
-                              Color.fromARGB(255, 167, 112, 3)),
+                              Color.fromARGB(255, 152,83,56),),
                           minimumSize:
                               MaterialStateProperty.all(const Size(50, 50))),
                       child: const Icon(Icons.restart_alt),

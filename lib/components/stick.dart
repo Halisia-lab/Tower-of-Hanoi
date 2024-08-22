@@ -62,7 +62,7 @@ class _StickState extends State<Stick> {
                       child: Image.asset("assets/images/poteau.png", fit:BoxFit.cover),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(bottom:25),
+                      padding: const EdgeInsets.only(bottom:10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.end,
