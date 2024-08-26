@@ -1,4 +1,4 @@
-package com.example.hanoi_tower
+package keilis.hanoi_tower
 
 import io.flutter.embedding.android.FlutterActivity
 
