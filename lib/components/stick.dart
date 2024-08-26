@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hanoi_tower/components/disk.dart';
 
 //permettre de gagner aussi sur la tour du milieu
-//ne pas bouger le même 2 fois de suite 
+//ne pas bouger le même 2 fois de suite
 
 class Stick extends StatefulWidget {
   final String name;
@@ -10,14 +10,13 @@ class Stick extends StatefulWidget {
   final Function startGame;
   final Function onDragEnd;
   final bool gamePaused;
-  const Stick({
-    super.key,
-    required this.name,
-    required this.diskNumbers,
-    required this.startGame,
-    required this.onDragEnd,
-    required this.gamePaused
-  });
+  const Stick(
+      {super.key,
+      required this.name,
+      required this.diskNumbers,
+      required this.startGame,
+      required this.onDragEnd,
+      required this.gamePaused});
 
   @override
   State<Stick> createState() => _StickState();
@@ -51,48 +50,53 @@ class _StickState extends State<Stick> {
             List<dynamic> rejected,
           ) {
             return SizedBox(
-             
-              width: 125,
-            
-                child: Stack(
-                  alignment: AlignmentDirectional.bottomCenter,
-                  children: [
-                    SizedBox(
-                   height:  500,
-                      child: Image.asset("assets/images/poteau.png", fit:BoxFit.cover),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom:10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          for (var element in widget.diskNumbers)
-                            Draggable<int>(
-                              onDragStarted: () {
-                                widget.startGame();
-                                updateCurrentSource(widget);
-                              },
-                              childWhenDragging: const SizedBox.shrink(),
-                              data: element,
-                              maxSimultaneousDrags:
-                                  element == widget.diskNumbers.first && !widget.gamePaused ? 1 : 0,
-                              feedback: Material(borderRadius: const BorderRadius.all(Radius.circular(10)),
-                                child: Disk(
-                                  number: element,
-                            isFeedback: true,
-                                ),
-                              ),
+              width: 130,
+              child: Stack(
+                alignment: AlignmentDirectional.bottomCenter,
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 3 / 5,
+                    child: RotationTransition(
+                        turns: const AlwaysStoppedAnimation(1.5 / 360),
+                        child: Image.asset("assets/images/poteau.png",
+                            fit: BoxFit.cover)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        for (var element in widget.diskNumbers)
+                          Draggable<int>(
+                            onDragStarted: () {
+                              widget.startGame();
+                              updateCurrentSource(widget);
+                            },
+                            childWhenDragging: const SizedBox.shrink(),
+                            data: element,
+                            maxSimultaneousDrags:
+                                element == widget.diskNumbers.first &&
+                                        !widget.gamePaused
+                                    ? 1
+                                    : 0,
+                            feedback: Material(
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(10)),
                               child: Disk(
                                 number: element,
-                                isFeedback: false,
+                                isFeedback: true,
                               ),
                             ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+                            child: Disk(
+                              number: element,
+                              isFeedback: false,
+                            ),
+                          ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             );
           },
         ),

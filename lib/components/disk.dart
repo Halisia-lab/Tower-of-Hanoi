@@ -13,8 +13,8 @@ class _DiskState extends State<Disk> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
-      width: widget.number * 10 + 60,
+      height: 35,
+      width: widget.number * 10 + 40,
       decoration:  BoxDecoration(
           color: widget.isFeedback ?  Color.fromARGB(255, 152,83,56) : Color.fromARGB(255,241,234,205) ,
           borderRadius: const BorderRadius.all(Radius.circular(10))),

@@ -40,7 +40,7 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-int initialDiskNumber = 3;
+int initialDiskNumber = 2;
 final stopwatch = Stopwatch();
 
 class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
@@ -113,6 +113,12 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
         mode: PlayerMode.mediaPlayer);
   }
 
+  playCloseSound() async {
+    final player = AudioPlayer();
+    await player.play(AssetSource("sounds/win.mp3"),
+        mode: PlayerMode.mediaPlayer);
+  }
+
   playClickSound() async {
     final player = AudioPlayer();
     await player.play(AssetSource("sounds/click.mp3"),
@@ -145,186 +151,204 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
       gamePaused: gamePaused,
     );
 
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 1,21,48),
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/city2.jpeg"),
-            opacity: 0.3,
-            fit: BoxFit.fill,
-          ),
-        ),
-        height: MediaQuery.of(context).size.height,
-        child: Stack(
-          children: <Widget>[
-            Positioned(
-              bottom: 40,
-              right: 0,
-              left: 0,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  stick1,
-                  stick2,
-                  stick3,
-                ],
-              ),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 1, 21, 48),
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/city2.jpeg"),
+              opacity: 0.3,
+              fit: BoxFit.fill,
             ),
-            if (stick3.diskNumbers.length == initialDiskNumber)
-              FutureBuilder(
-                  future: playWinSound(),
-                  builder: (context, snapshot) {
-                    if (underBestCounter()) {
-                      snapshot.data;
-                    }
-                    return AlertDialog(
-                      surfaceTintColor: Colors.white,
-                      title: const Text(
-                        'YOU WON !',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 41, 41, 41),
-                            fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center,
-                      ),
-                      content: SingleChildScrollView(
-                        child: ListBody(
-                          children: <Widget>[
-                            Text(
-                              stopwatch.elapsed.inSeconds >= 60
-                                  ? 'Time: ${stopwatch.elapsed.inMinutes}min ${stopwatch.elapsed.inSeconds - 60 * stopwatch.elapsed.inMinutes}s'
-                                  : 'Time: ${stopwatch.elapsed.inSeconds}s',
+          ),
+          height: MediaQuery.of(context).size.height,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: Stack(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      stick1,
+                      stick2,
+                      stick3,
+                    ],
+                  ),
+                  if (stick3.diskNumbers.length == initialDiskNumber)
+                    FutureBuilder(
+                        future:  underBestCounter() ? playWinSound() : playCloseSound(),
+                        builder: (context, snapshot) {
+                      
+                          return underBestCounter() ? AlertDialog(
+                            surfaceTintColor: Colors.white,
+                            title: const Text(
+                              'YOU WON !',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 44, 138, 0),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 30),
+                              textAlign: TextAlign.center,
+                            ),
+                            content: SingleChildScrollView(
+                              child: ListBody(
+                                children: <Widget>[
+                                  Text(style: const TextStyle(fontWeight: FontWeight.bold),
+                                    stopwatch.elapsed.inSeconds >= 60
+                                        ? 'TIME: ${stopwatch.elapsed.inMinutes}min ${stopwatch.elapsed.inSeconds - 60 * stopwatch.elapsed.inMinutes}s'
+                                        : 'TIME: ${stopwatch.elapsed.inSeconds}s',
+                                  ),
+                                ],
+                              ),
+                            ),
+                            actions: <Widget>[
+                              // TextButton(
+                              //   child: const Text(
+                              //     'Restart',
+                              //     style: TextStyle(
+                              //         fontSize: 14,
+                              //         color: Color.fromARGB(255, 167, 112, 3)),
+                              //   ),
+                              //   onPressed: () {
+                              //     endGame();
+                              //     restart();
+                              //   },
+                              // ),
+                              TextButton(
+                                child: const Text('NEXT STEP',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                        color: Color.fromARGB(255, 167, 112, 3))),
+                                onPressed: () {
+                                  setState(() {
+                                    initialDiskNumber++;
+                                    bestCounter = pow(2, initialDiskNumber) - 1;
+                                    endGame();
+                                    restart();
+                                  });
+                                },
+                              ),
+                            ],
+                          ) : AlertDialog(
+                            surfaceTintColor: Colors.white,
+                            title: const Text(
+                              'YOU ARE CLOSE !',
+                              style: TextStyle(
+                                fontSize: 24,
+                                  color: Color.fromARGB(255, 88, 88, 88),
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ),
+                            content: SingleChildScrollView(
+                              child: ListBody(
+                                children: <Widget>[
+                                  Text(style: const TextStyle(fontWeight: FontWeight.bold),
+                                    stopwatch.elapsed.inSeconds >= 60
+                                        ? 'Time: ${stopwatch.elapsed.inMinutes}min ${stopwatch.elapsed.inSeconds - 60 * stopwatch.elapsed.inMinutes}s'
+                                        : 'Time: ${stopwatch.elapsed.inSeconds}s',
+                                  ),
+                                ],
+                              ),
+                            ),
+                            actions: <Widget>[
+                              TextButton(
+                                child: const Text(
+                                  'RESTART',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      color: Color.fromARGB(255, 167, 112, 3)),
+                                ),
+                                onPressed: () {
+                                  endGame();
+                                  restart();
+                                },
+                              ),
+                              // TextButton(
+                              //   child: const Text('Next step',
+                              //       style: TextStyle(
+                              //           fontSize: 14,
+                              //           color: Color.fromARGB(255, 167, 112, 3))),
+                              //   onPressed: () {
+                              //     setState(() {
+                              //       initialDiskNumber++;
+                              //       bestCounter = pow(2, initialDiskNumber) - 1;
+                              //       endGame();
+                              //       restart();
+                              //     });
+                              //   },
+                              // ),
+                            ],
+                          );
+                        }),
+                  
+              
+                  Padding(
+                    padding: const EdgeInsets.only(top: 80),
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            ElevatedButton(
+                              style: ButtonStyle(
+                                  elevation: MaterialStateProperty.all(4),
+                                  surfaceTintColor:
+                                      MaterialStateProperty.all(Colors.white),
+                                  foregroundColor: MaterialStateProperty.all(
+                                    const Color.fromARGB(255, 152, 83, 56),
+                                  ),
+                                  minimumSize: MaterialStateProperty.all(
+                                      const Size(50, 50))),
+                              child: Icon(
+                                  gamePaused ? Icons.play_arrow : Icons.pause),
+                              onPressed: () => gamePaused ? play() : pause(),
+                            ),
+                            Container(
+                              height: 90,
+                              width: 180,
+                              decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                        "assets/images/window.webp",
+                                      ),
+                                      fit: BoxFit.fitHeight)),
+                              child: Center(
+                                child: Text(
+                                  "${counter.toString()} / ${bestCounter.toString()}",
+                                  style: const TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    
+                                      ),
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              style: ButtonStyle(
+                                  elevation: MaterialStateProperty.all(4),
+                                  surfaceTintColor:
+                                      MaterialStateProperty.all(Colors.white),
+                                  foregroundColor: MaterialStateProperty.all(
+                                    const Color.fromARGB(255, 152, 83, 56),
+                                  ),
+                                  minimumSize: MaterialStateProperty.all(
+                                      const Size(50, 50))),
+                              child: const Icon(Icons.restart_alt),
+                              onPressed: () => restart(),
                             ),
                           ],
                         ),
                       ),
-                      actions: <Widget>[
-                        TextButton(
-                          child: const Text(
-                            'Restart',
-                            style: TextStyle(
-                                fontSize: 14,
-                                color: Color.fromARGB(255, 167, 112, 3)),
-                          ),
-                          onPressed: () {
-                            endGame();
-                            restart();
-                          },
-                        ),
-                        TextButton(
-                          child: const Text('Next step',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color.fromARGB(255, 167, 112, 3))),
-                          onPressed: () {
-                            setState(() {
-                              initialDiskNumber++;
-                              bestCounter = pow(2, initialDiskNumber) - 1;
-                              endGame();
-                              restart();
-                            });
-                          },
-                        ),
-                      ],
-                    );
-                  }),
-            //  Column(
-            //       mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //       crossAxisAlignment: CrossAxisAlignment.center,
-            //       children: [
-            //         Stack(
-            //           alignment: AlignmentDirectional.center,
-            //           children: [
-            //             const Image(image: AssetImage("images/window.webp",)),
-            //             Text(
-            //               "${counter.toString()} / ${bestCounter.toString()}",
-            //               style: const TextStyle(
-            //                   fontSize: 40,
-            //                   fontWeight: FontWeight.bold,
-            //                   color: Colors.white
-            //                   // color:
-            //                   //     underBestCounter() ? Colors.green : Colors.orange
-            //                   ),
-            //             ),
-            //           ],
-            //         ),
-            //         ElevatedButton(
-            //           style: ButtonStyle(
-            //               minimumSize:
-            //                   MaterialStateProperty.all(const Size(50, 50))),
-            //           child: const Icon(Icons.restart_alt),
-            //           onPressed: () => restart(),
-            //         ),
-            //       ]),
-
-            Padding(
-              padding: const EdgeInsets.only(top: 80),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    ElevatedButton(
-                      style: ButtonStyle(
-                          elevation: MaterialStateProperty.all(4),
-                          surfaceTintColor:
-                              MaterialStateProperty.all(Colors.white),
-                          foregroundColor: MaterialStateProperty.all(
-                              Color.fromARGB(255, 152,83,56),
-                              ),
-                          minimumSize:
-                              MaterialStateProperty.all(const Size(50, 50))),
-                      child: Icon(gamePaused ? Icons.play_arrow : Icons.pause),
-                      onPressed: () => gamePaused ? play() : pause(),
                     ),
-                    Container(
-                      height: 150,
-                      width: 230,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage(
-                                "assets/images/window.webp",
-                              ),
-                              fit: BoxFit.fitHeight)
-                          ),
-                      child: Center(
-                        child: Text(
-                         // "${counter.toString()}",
-                           "${counter.toString()} / ${bestCounter.toString()}",
-                          style: const TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
-                              // color:
-                              //     underBestCounter() ? Colors.green : Colors.orange
-                              ),
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                          elevation: MaterialStateProperty.all(4),
-                          surfaceTintColor:
-                              MaterialStateProperty.all(Colors.white),
-                          foregroundColor: MaterialStateProperty.all(
-                              Color.fromARGB(255, 152,83,56),),
-                          minimumSize:
-                              MaterialStateProperty.all(const Size(50, 50))),
-                      child: const Icon(Icons.restart_alt),
-                      onPressed: () => restart(),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
-
-            // Positioned(
-            //   left: 0,
-            //   right: 0,
-            //   bottom: 0,
-            //   child: Image.asset("images/background_light.webp", height: MediaQuery.of(context).size.height,width: MediaQuery.of(context).size.width,),
-            // ),
-          ],
         ),
       ),
     );
