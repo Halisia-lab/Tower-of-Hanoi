@@ -18,7 +18,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -202,18 +201,6 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                               ),
                             ),
                             actions: <Widget>[
-                              // TextButton(
-                              //   child: const Text(
-                              //     'Restart',
-                              //     style: TextStyle(
-                              //         fontSize: 14,
-                              //         color: Color.fromARGB(255, 167, 112, 3)),
-                              //   ),
-                              //   onPressed: () {
-                              //     endGame();
-                              //     restart();
-                              //   },
-                              // ),
                               TextButton(
                                 child: const Text('NEXT STEP',
                                     style: TextStyle(
@@ -265,20 +252,6 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                   restart();
                                 },
                               ),
-                              // TextButton(
-                              //   child: const Text('Next step',
-                              //       style: TextStyle(
-                              //           fontSize: 14,
-                              //           color: Color.fromARGB(255, 167, 112, 3))),
-                              //   onPressed: () {
-                              //     setState(() {
-                              //       initialDiskNumber++;
-                              //       bestCounter = pow(2, initialDiskNumber) - 1;
-                              //       endGame();
-                              //       restart();
-                              //     });
-                              //   },
-                              // ),
                             ],
                           );
                         }),
