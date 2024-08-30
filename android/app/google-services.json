@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "771675655192",
+    "project_id": "tower-of-hanoi-9224d",
+    "storage_bucket": "tower-of-hanoi-9224d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771675655192:android:d38cee5ba2902aaa64476d",
+        "android_client_info": {
+          "package_name": "keilis.hanoi_tower"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwoNxiV1DgLVnM9ZHiaJ-H2gGJM4ZZKRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
