@@ -22,6 +22,26 @@ dependencies: \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/audioplayers_darwin/audioplayers_darwin.framework/Modules/module.modulemap \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/audioplayers_darwin/audioplayers_darwin.framework/Headers/audioplayers_darwin-umbrella.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/audioplayers_darwin/audioplayers_darwin.framework/Headers/audioplayers_darwin-Swift.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/cloud_firestore/cloud_firestore.framework/Headers/FLTFirebaseFirestorePlugin.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/cloud_firestore/cloud_firestore.framework/Modules/module.modulemap \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/firebase_core/firebase_core.framework/Modules/module.modulemap \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRTimestamp.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRVersion.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/firebase_core/firebase_core.framework/Headers/firebase_core-umbrella.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/firebase_core/firebase_core.framework/Headers/FLTFirebaseCorePlugin.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/firebase_core/firebase_core.framework/Headers/FLTFirebasePlugin.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/firebase_core/firebase_core.framework/Headers/messages.g.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/firebase_core/firebase_core.framework/Headers/FLTFirebasePluginRegistry.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/cloud_firestore/cloud_firestore.framework/Headers/cloud_firestore-umbrella.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/cloud_firestore/cloud_firestore.framework/Headers/CustomPigeonHeaderFirestore.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/cloud_firestore/cloud_firestore.framework/Headers/FirestoreMessages.g.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/path_provider_foundation/path_provider_foundation.framework/Modules/module.modulemap \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/path_provider_foundation/path_provider_foundation.framework/Headers/path_provider_foundation-umbrella.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphonesimulator/path_provider_foundation/path_provider_foundation.framework/Headers/path_provider_foundation-Swift.h

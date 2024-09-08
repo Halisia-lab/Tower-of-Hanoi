@@ -1,6 +1,9 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:hanoi_tower/components/splash_screen.dart';
+import 'package:hanoi_tower/screens/levels_screen.dart';
+import 'package:hanoi_tower/screens/splash_screen.dart';
 import 'dart:math';
 import 'dart:core';
 import 'components/stick.dart';
@@ -19,6 +22,7 @@ void main() async {
     initialRoute: '/splash',
     routes: {
       '/splash': (context) => const SplashScreen(),
+      '/levels': (context) => const LevelsScreen(),
       '/home': (context) => const MyApp(),
     },
   ));
@@ -48,10 +52,11 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-int initialDiskNumber = 4;
+int initialDiskNumber = 2;
 final stopwatch = Stopwatch();
 
 class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
+  
   List<int> leftDiskNumbers =
       List.generate(initialDiskNumber, (index) => index + 1, growable: true);
   List<int> middleDiskNumbers = [];
@@ -60,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
   num bestCounter = pow(2, initialDiskNumber) - 1;
   bool gameStarted = false;
   bool gamePaused = false;
-  int currentLevel = 1;
+  int level = 1;
 
   addDiskWithNumber(int diskNumber, Stick source, Stick destination) {
     setState(() {
@@ -121,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
         FirebaseFirestore.instance.collection("Achievements");
     achievementsCollection.add({
       "attempts": counter,
-      "level": currentLevel,
+      "level": initialDiskNumber,
       "time": stopwatch.elapsed.inSeconds
     });
   }
@@ -244,7 +249,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                                 255, 167, 112, 3))),
                                     onPressed: () {
                                       setState(() {
-                                        currentLevel++;
+                                        level++;
                                         initialDiskNumber++;
                                         bestCounter =
                                             pow(2, initialDiskNumber) - 1;
@@ -291,6 +296,24 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                     onPressed: () {
                                       endGame();
                                       restart();
+                                    },
+                                  ),
+                                    TextButton(
+                                    child: const Text('NEXT STEP',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20,
+                                            color: Color.fromARGB(
+                                                255, 167, 112, 3))),
+                                    onPressed: () {
+                                      setState(() {
+                                        level++;
+                                        initialDiskNumber++;
+                                        bestCounter =
+                                            pow(2, initialDiskNumber) - 1;
+                                        endGame();
+                                        restart();
+                                      });
                                     },
                                   ),
                                 ],
