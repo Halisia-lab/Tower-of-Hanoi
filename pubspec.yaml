@@ -75,6 +75,8 @@ flutter:
      - assets/images/city2.jpeg
      - assets/images/poteau.png
      - assets/images/window.webp
+     - assets/images/light_on.png
+     - assets/images/light_off.png
      - assets/images/splash_screen.png
      - assets/animations/splash_animation.json
 

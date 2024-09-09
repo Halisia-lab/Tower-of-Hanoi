@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hanoi_tower/screens/levels_screen.dart';
 import 'package:hanoi_tower/screens/splash_screen.dart';
+import 'package:hanoi_tower/utils/is_level_completed.dart.dart';
 import 'dart:math';
 import 'dart:core';
 import 'components/stick.dart';
@@ -19,17 +20,18 @@ void main() async {
   );
 
   runApp(MaterialApp(
-    initialRoute: '/splash',
+    initialRoute: '/levels',
     routes: {
       '/splash': (context) => const SplashScreen(),
       '/levels': (context) => const LevelsScreen(),
-      '/home': (context) => const MyApp(),
+      '/home': (context) => MyApp(),
     },
   ));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  late int level;
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,33 +41,32 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page', level: level),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  MyHomePage({super.key, required this.title, required this.level});
   final String title;
+  int level;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-int initialDiskNumber = 2;
 final stopwatch = Stopwatch();
 
 class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
-  
-  List<int> leftDiskNumbers =
-      List.generate(initialDiskNumber, (index) => index + 1, growable: true);
+  late List<int> leftDiskNumbers =
+      List.generate(widget.level + 1, (index) => index + 1, growable: true);
+  late int initialDiskNumber = widget.level + 1;
   List<int> middleDiskNumbers = [];
   List<int> rightDiskNumbers = [];
   int counter = 0;
-  num bestCounter = pow(2, initialDiskNumber) - 1;
+  late num bestCounter = pow(2, widget.level + 1) - 1;
   bool gameStarted = false;
   bool gamePaused = false;
-  int level = 1;
 
   addDiskWithNumber(int diskNumber, Stick source, Stick destination) {
     setState(() {
@@ -122,13 +123,14 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
   }
 
   saveLevelData() {
-    CollectionReference achievementsCollection =
-        FirebaseFirestore.instance.collection("Achievements");
-    achievementsCollection.add({
+    FirebaseFirestore.instance
+        .collection("Levels")
+        .doc(widget.level.toString())
+        .set({
       "attempts": counter,
-      "level": initialDiskNumber,
+      "level": widget.level,
       "time": stopwatch.elapsed.inSeconds
-    });
+    }).onError((e, _) => print("Error writing document: $e"));
   }
 
   makeLevelCompleted() async {
@@ -137,7 +139,16 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
   }
 
   makeLevelCompletedWithExtraAttempts() async {
-    saveLevelData();
+    final ref = FirebaseFirestore.instance.doc("/Levels/${widget.level}");
+    final snapshot = await ref.get();
+
+    if (snapshot.exists) {
+      if (!isLevelCompleted(widget.level, snapshot.data()!["attempts"])) {
+        saveLevelData();
+      }
+    } else {
+      saveLevelData();
+    }
     await playCloseSound();
   }
 
@@ -249,8 +260,9 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                                 255, 167, 112, 3))),
                                     onPressed: () {
                                       setState(() {
-                                        level++;
-                                        initialDiskNumber++;
+                                        widget.level++;
+                                        initialDiskNumber =
+                                            initialDiskNumber + 1;
                                         bestCounter =
                                             pow(2, initialDiskNumber) - 1;
                                         endGame();
@@ -298,7 +310,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                       restart();
                                     },
                                   ),
-                                    TextButton(
+                                  TextButton(
                                     child: const Text('NEXT STEP',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
@@ -307,8 +319,9 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                                 255, 167, 112, 3))),
                                     onPressed: () {
                                       setState(() {
-                                        level++;
-                                        initialDiskNumber++;
+                                        widget.level++;
+                                        initialDiskNumber =
+                                            initialDiskNumber + 1;
                                         bestCounter =
                                             pow(2, initialDiskNumber) - 1;
                                         endGame();
