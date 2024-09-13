@@ -1,6 +1,6 @@
 dependencies: \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/cloud_firestore.build/module.modulemap \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/FLTFirebaseFirestorePlugin.m \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/FLTFirebaseFirestorePlugin.m \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Target\ Support\ Files/cloud_firestore/cloud_firestore-prefix.pch \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Headers/Public/Firebase/Firebase.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseCore.build/module.modulemap \
@@ -96,14 +96,14 @@ dependencies: \
   /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebasePlugin.h \
   /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/messages.g.h \
   /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebasePluginRegistry.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTDocumentSnapshotStreamHandler.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTFirebaseFirestoreReader.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTFirebaseFirestoreUtils.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTFirebaseFirestoreExtension.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTLoadBundleStreamHandler.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTQuerySnapshotStreamHandler.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTSnapshotsInSyncStreamHandler.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTTransactionStreamHandler.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Public/FirestoreMessages.g.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FirestorePigeonParser.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Public/FLTFirebaseFirestorePlugin.h
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTDocumentSnapshotStreamHandler.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTFirebaseFirestoreReader.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTFirebaseFirestoreUtils.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTFirebaseFirestoreExtension.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTLoadBundleStreamHandler.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTQuerySnapshotStreamHandler.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTSnapshotsInSyncStreamHandler.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTTransactionStreamHandler.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Public/FirestoreMessages.g.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FirestorePigeonParser.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Public/FLTFirebaseFirestorePlugin.h

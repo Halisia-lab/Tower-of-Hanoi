@@ -1,6 +1,6 @@
 dependencies: \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/cloud_firestore.build/module.modulemap \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/FLTFirebaseFirestoreUtils.m \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/FLTFirebaseFirestoreUtils.m \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Target\ Support\ Files/cloud_firestore/cloud_firestore-prefix.pch \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Headers/Public/Firebase/Firebase.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseCore.build/module.modulemap \
@@ -73,8 +73,8 @@ dependencies: \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRTransactionOptions.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRWriteBatch.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-Swift.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTFirebaseFirestoreExtension.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTFirebaseFirestoreReader.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTFirebaseFirestoreExtension.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTFirebaseFirestoreReader.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Modules/module.modulemap \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/Flutter.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/FlutterAppDelegate.h \
@@ -92,5 +92,5 @@ dependencies: \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/FlutterViewController.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTFirebaseFirestoreUtils.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.3.0/ios/Classes/Private/FLTFirebaseFirestoreWriter.h
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTFirebaseFirestoreUtils.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTFirebaseFirestoreWriter.h

@@ -69,14 +69,18 @@ flutter:
      - assets/sounds/win2.mp3
      - assets/images/background.avif
      - assets/images/wood.jpeg
+     - assets/images/wood_dark.png
      - assets/images/background_light.webp
      - assets/images/waterfall.jpeg
+     - assets/images/house.jpg
      - assets/images/city.jpeg
      - assets/images/city2.jpeg
      - assets/images/poteau.png
      - assets/images/window.webp
      - assets/images/light_on.png
      - assets/images/light_off.png
+     - assets/images/gold.png
+     - assets/images/silver.png
      - assets/images/splash_screen.png
      - assets/animations/splash_animation.json
 

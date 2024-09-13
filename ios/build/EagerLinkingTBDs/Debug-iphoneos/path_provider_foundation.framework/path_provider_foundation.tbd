@@ -15,6 +15,7 @@
             "_$s24path_provider_foundation18PathProviderPluginC012getContainerD018appGroupIdentifierSSSgSS_tF",
             "_$s24path_provider_foundation18PathProviderPluginCfD",
             "_$s24path_provider_foundation13DirectoryTypeOSHAAMc",
+            "_Swift50Overrides",
             "_$s24path_provider_foundation13DirectoryTypeO8rawValueSivg",
             "_$s24path_provider_foundation13DirectoryTypeOMa",
             "_$s24path_provider_foundation20PathProviderApiSetupCACycfCTq",
@@ -27,6 +28,7 @@
             "_$s24path_provider_foundation18PathProviderPluginC8register4withySo07FlutterF9Registrar_p_tFZ",
             "_$s24path_provider_foundation13DirectoryTypeO8rawValueSivpMV",
             "_$s24path_provider_foundation13DirectoryTypeOSYAAMc",
+            "_Swift51Overrides",
             "_$s24path_provider_foundation13DirectoryTypeON",
             "_$s24path_provider_foundation20PathProviderApiSetupCMn",
             "_$s24path_provider_foundation18PathProviderPluginCACycfC",
@@ -44,6 +46,13 @@
           "objc_class": [
             "PodsDummy_path_provider_foundation",
             "_TtC24path_provider_foundation18PathProviderPlugin"
+          ]
+        },
+        "text": {
+          "global": [
+            "__ZN5swift34swift50override_conformsToProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEPFPKNS_18TargetWitnessTableIS1_EES4_S8_E",
+            "__Z34_swiftoverride_class_getSuperclassPKN5swift14TargetMetadataINS_9InProcessEEE",
+            "__ZN5swift39swift51override_conformsToSwiftProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEN7__swift9__runtime4llvm9StringRefEPFPKNS_35TargetProtocolConformanceDescriptorIS1_EES4_S8_SC_E"
           ]
         }
       }
@@ -67,7 +76,7 @@
     ],
     "target_info": [
       {
-        "min_deployment": "15.3",
+        "min_deployment": "12",
         "target": "arm64-ios"
       }
     ]
