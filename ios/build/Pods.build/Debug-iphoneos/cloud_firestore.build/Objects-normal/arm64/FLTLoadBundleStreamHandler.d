@@ -92,10 +92,10 @@ dependencies: \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64/Flutter.framework/Headers/FlutterViewController.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Target\ Support\ Files/firebase_core/firebase_core-umbrella.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebaseCorePlugin.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebasePlugin.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/messages.g.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebasePluginRegistry.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebaseCorePlugin.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebasePlugin.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/messages.g.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebasePluginRegistry.h \
   /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTFirebaseFirestoreUtils.h \
   /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTFirebaseFirestoreExtension.h \
   /Users/halisia/.pub-cache/hosted/pub.dev/cloud_firestore-5.4.0/ios/Classes/Private/FLTLoadBundleStreamHandler.h
