@@ -209,13 +209,22 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                         return underBestCounter()
                             ? AlertDialog(
                                 surfaceTintColor: Colors.white,
-                                title: const Text(
-                                  'YOU WON !',
-                                  style: TextStyle(
-                                      color: Color.fromARGB(255, 44, 138, 0),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 30),
-                                  textAlign: TextAlign.center,
+                                title: const Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(right: 15.0),
+                                      child: Image(image: AssetImage("assets/images/gold.png"), width: 30,),
+                                    ),
+                                    Text(
+                                      'YOU WON !',
+                                      style: TextStyle(
+                                          color: Color.fromARGB(255, 44, 138, 0),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 24),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ],
                                 ),
                                 content: SingleChildScrollView(
                                   child: ListBody(
@@ -235,7 +244,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                     child: const Text('NEXT STEP',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 20,
+                                            fontSize: 16,
                                             color: Color.fromARGB(
                                                 255, 167, 112, 3))),
                                     onPressed: () {
@@ -254,13 +263,22 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                               )
                             : AlertDialog(
                                 surfaceTintColor: Colors.white,
-                                title: const Text(
-                                  'YOU ARE CLOSE !',
-                                  style: TextStyle(
-                                      fontSize: 24,
-                                      color: Color.fromARGB(255, 88, 88, 88),
-                                      fontWeight: FontWeight.bold),
-                                  textAlign: TextAlign.center,
+                                title: const Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(right: 15.0),
+                                      child: Image(image: AssetImage("assets/images/silver.png"), width: 30,),
+                                    ),
+                                     Text(
+                                      'YOU ARE CLOSE !',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          color: Color.fromARGB(255, 88, 88, 88),
+                                          fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ],
                                 ),
                                 content: SingleChildScrollView(
                                   child: ListBody(
@@ -281,9 +299,9 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                       'RESTART',
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 20,
+                                          fontSize: 16,
                                           color:
-                                              Color.fromARGB(255, 167, 112, 3)),
+                                              Color.fromARGB(255, 88, 88, 88)),
                                     ),
                                     onPressed: () {
                                       endGame();
@@ -294,7 +312,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                     child: const Text('NEXT STEP',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 20,
+                                            fontSize: 16,
                                             color: Color.fromARGB(
                                                 255, 167, 112, 3))),
                                     onPressed: () {
