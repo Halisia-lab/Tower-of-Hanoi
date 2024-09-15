@@ -1,0 +1,18 @@
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/CodablePassThroughTypes.swift":
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.d"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.o"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.swiftdeps"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.dia"
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.swiftconstvalues"
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/AsyncAwait/CollectionReference+AsyncAwait.swift":
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.d"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.o"
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.swiftconstvalues"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.swiftdeps"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.dia"
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/CodableErrors.swift":
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.swiftdeps"
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.d"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.o"
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.swiftconstvalues"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.dia"

@@ -44,4 +44,7 @@ dependencies: \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/cloud_firestore/cloud_firestore.framework/Headers/FirestoreMessages.g.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/path_provider_foundation/path_provider_foundation.framework/Modules/module.modulemap \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/path_provider_foundation/path_provider_foundation.framework/Headers/path_provider_foundation-umbrella.h \
-  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/path_provider_foundation/path_provider_foundation.framework/Headers/path_provider_foundation-Swift.h
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/path_provider_foundation/path_provider_foundation.framework/Headers/path_provider_foundation-Swift.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/shared_preferences_foundation/shared_preferences_foundation.framework/Modules/module.modulemap \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/shared_preferences_foundation/shared_preferences_foundation.framework/Headers/shared_preferences_foundation-umbrella.h \
+  /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/build/ios/Debug-iphoneos/shared_preferences_foundation/shared_preferences_foundation.framework/Headers/shared_preferences_foundation-Swift.h

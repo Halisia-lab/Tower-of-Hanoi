@@ -1,0 +1,18 @@
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/DocumentID.swift":
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentID.d"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentID.dia"
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentID.swiftconstvalues"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentID.o"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentID.swiftdeps"
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/CollectionReference+WriteEncodable.swift":
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.dia"
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.swiftconstvalues"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.swiftdeps"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.o"
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.d"
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/DocumentReference+Codable.swift":
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentReference+Codable.swiftconstvalues"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentReference+Codable.o"
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentReference+Codable.d"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentReference+Codable.swiftdeps"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/DocumentReference+Codable.dia"

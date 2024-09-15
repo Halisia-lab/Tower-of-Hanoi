@@ -1,13 +1,14 @@
-// ignore_for_file: deprecated_member_use
+import 'dart:io';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hanoi_tower/screens/levels_screen.dart';
 import 'package:hanoi_tower/screens/splash_screen.dart';
+import 'package:hanoi_tower/services/firestore_service.dart';
+import 'package:hanoi_tower/services/route_service.dart';
+import 'package:hanoi_tower/services/sound_service.dart';
 import 'dart:math';
 import 'dart:core';
 import 'components/stick.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
@@ -18,18 +19,28 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  checkAndInitializeLevel('Levels', '1', {
+    'attempts': 0,
+    'time': 0,
+    'level': 1,
+  });
+
+  getOrCreateUserId();
+
   runApp(MaterialApp(
     initialRoute: '/splash',
     routes: {
       '/splash': (context) => const SplashScreen(),
       '/levels': (context) => const LevelsScreen(),
-      '/home': (context) => const MyApp(),
+      '/home': (context) => MyApp(),
     },
   ));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  int level = 1;
+
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,33 +50,32 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page', level: level),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  MyHomePage({super.key, required this.title, required this.level});
   final String title;
+  int level;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-int initialDiskNumber = 2;
 final stopwatch = Stopwatch();
 
 class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
-  
-  List<int> leftDiskNumbers =
-      List.generate(initialDiskNumber, (index) => index + 1, growable: true);
+  late List<int> leftDiskNumbers =
+      List.generate(widget.level + 1, (index) => index + 1, growable: true);
+  late int initialDiskNumber = widget.level + 1;
   List<int> middleDiskNumbers = [];
   List<int> rightDiskNumbers = [];
   int counter = 0;
-  num bestCounter = pow(2, initialDiskNumber) - 1;
+  late num bestCounter = pow(2, widget.level + 1) - 1;
   bool gameStarted = false;
   bool gamePaused = false;
-  int level = 1;
 
   addDiskWithNumber(int diskNumber, Stick source, Stick destination) {
     setState(() {
@@ -121,45 +131,9 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
     });
   }
 
-  saveLevelData() {
-    CollectionReference achievementsCollection =
-        FirebaseFirestore.instance.collection("Achievements");
-    achievementsCollection.add({
-      "attempts": counter,
-      "level": initialDiskNumber,
-      "time": stopwatch.elapsed.inSeconds
-    });
-  }
-
-  makeLevelCompleted() async {
-    saveLevelData();
-    await playWinSound();
-  }
-
-  makeLevelCompletedWithExtraAttempts() async {
-    saveLevelData();
-    await playCloseSound();
-  }
-
-  playWinSound() async {
-    final player = AudioPlayer();
-    await player.play(AssetSource("sounds/win2.mp3"),
-        mode: PlayerMode.mediaPlayer);
-  }
-
-  playCloseSound() async {
-    final player = AudioPlayer();
-    await player.play(AssetSource("sounds/win.mp3"),
-        mode: PlayerMode.mediaPlayer);
-  }
-
-  playClickSound() async {
-    final player = AudioPlayer();
-    await player.play(AssetSource("sounds/click.mp3"),
-        mode: PlayerMode.mediaPlayer);
-  }
-
   underBestCounter() => counter <= bestCounter;
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -185,20 +159,37 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
       gamePaused: gamePaused,
     );
 
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 1, 21, 48),
-        body: Container(
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+            size: 30,
+          ), // Different icon for back button
+          onPressed: () {
+            Navigator.of(context).push(createRoute());
+          },
+        ),
+      ),
+      backgroundColor: const Color.fromARGB(255, 1, 21, 48),
+      body: OrientationBuilder(builder: (context, orientation) {
+        return Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/images/city2.jpeg"),
-              opacity: 0.3,
-              fit: BoxFit.fill,
+              opacity: 0.7,
+              fit: BoxFit.cover,
             ),
           ),
           height: MediaQuery.of(context).size.height,
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: orientation == Orientation.portrait
+                ? const EdgeInsets.only(bottom: 40.0)
+                : const EdgeInsets.only(bottom: 15.0),
             child: Stack(
               children: <Widget>[
                 Row(
@@ -212,8 +203,8 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                 if (stick3.diskNumbers.length == initialDiskNumber)
                   FutureBuilder(
                       future: underBestCounter()
-                          ? makeLevelCompleted()
-                          : makeLevelCompletedWithExtraAttempts(),
+                          ? makeLevelCompleted(counter, widget.level, stopwatch.elapsed.inSeconds)
+                          : makeLevelCompletedWithExtraAttempts(counter, widget.level, stopwatch.elapsed.inSeconds),
                       builder: (context, snapshot) {
                         return underBestCounter()
                             ? AlertDialog(
@@ -249,8 +240,9 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                                 255, 167, 112, 3))),
                                     onPressed: () {
                                       setState(() {
-                                        level++;
-                                        initialDiskNumber++;
+                                        widget.level++;
+                                        initialDiskNumber =
+                                            initialDiskNumber + 1;
                                         bestCounter =
                                             pow(2, initialDiskNumber) - 1;
                                         endGame();
@@ -298,7 +290,7 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                       restart();
                                     },
                                   ),
-                                    TextButton(
+                                  TextButton(
                                     child: const Text('NEXT STEP',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
@@ -307,8 +299,9 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                                                 255, 167, 112, 3))),
                                     onPressed: () {
                                       setState(() {
-                                        level++;
-                                        initialDiskNumber++;
+                                        widget.level++;
+                                        initialDiskNumber =
+                                            initialDiskNumber + 1;
                                         bestCounter =
                                             pow(2, initialDiskNumber) - 1;
                                         endGame();
@@ -320,11 +313,19 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
                               );
                       }),
                 Padding(
-                  padding: const EdgeInsets.only(top: 80),
+                  padding: Platform.isIOS
+                      ? (orientation == Orientation.portrait
+                          ? const EdgeInsets.only(top: 70, left: 3, right: 3)
+                          : const EdgeInsets.only(top: 30, left: 50, right: 20))
+                      : (orientation == Orientation.portrait
+                          ? const EdgeInsets.only(top: 30, left: 3, right: 3)
+                          : const EdgeInsets.only(
+                              top: 30, left: 10, right: 10)),
                   child: Align(
                     alignment: Alignment.topCenter,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
+                      padding:
+                          const EdgeInsets.only(left: 10, right: 10, top: 30),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -383,8 +384,8 @@ class _MyHomePageState extends State<MyHomePage> with ChangeNotifier {
               ],
             ),
           ),
-        ),
-      ),
+        );
+      }),
     );
   }
 }

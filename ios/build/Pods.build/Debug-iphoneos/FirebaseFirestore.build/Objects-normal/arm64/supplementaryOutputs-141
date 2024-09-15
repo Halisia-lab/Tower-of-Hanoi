@@ -1,0 +1,18 @@
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/PropertyWrapper/FirestoreQuery.swift":
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQuery.d"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQuery.o"
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQuery.swiftconstvalues"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQuery.dia"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQuery.swiftdeps"
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/AsyncAwait/Firestore+AsyncAwait.swift":
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/Firestore+AsyncAwait.swiftconstvalues"
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/Firestore+AsyncAwait.d"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/Firestore+AsyncAwait.o"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/Firestore+AsyncAwait.swiftdeps"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/Firestore+AsyncAwait.dia"
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/PropertyWrapper/FirestoreQueryObservable.swift":
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQueryObservable.d"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQueryObservable.swiftdeps"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQueryObservable.dia"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQueryObservable.o"
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FirestoreQueryObservable.swiftconstvalues"

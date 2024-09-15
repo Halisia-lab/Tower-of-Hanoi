@@ -1,0 +1,18 @@
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/FieldValue+Encodable.swift":
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FieldValue+Encodable.swiftconstvalues"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FieldValue+Encodable.dia"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FieldValue+Encodable.o"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FieldValue+Encodable.swiftdeps"
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/FieldValue+Encodable.d"
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/EncoderDecoder.swift":
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/EncoderDecoder.swiftconstvalues"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/EncoderDecoder.swiftdeps"
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/EncoderDecoder.d"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/EncoderDecoder.o"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/EncoderDecoder.dia"
+"/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/ExplicitNull.swift":
+  const-values: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/ExplicitNull.swiftconstvalues"
+  swift-dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/ExplicitNull.swiftdeps"
+  dependencies: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/ExplicitNull.d"
+  object: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/ExplicitNull.o"
+  diagnostics: "/Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/Objects-normal/arm64/ExplicitNull.dia"
