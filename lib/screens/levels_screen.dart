@@ -36,10 +36,10 @@ class LevelsScreen extends StatelessWidget {
           child: Padding(
             padding: Platform.isIOS
                 ? (orientation == Orientation.portrait
-                    ? const EdgeInsets.only(top: 70, left: 3, right: 3)
+                    ? const EdgeInsets.only(top: 30, left: 3, right: 3)
                     : const EdgeInsets.only(top: 30, left: 50, right: 20))
                 : (orientation == Orientation.portrait
-                    ? const EdgeInsets.only(top: 30, left: 3, right: 3)
+                    ? const EdgeInsets.only(top: 20, left: 3, right: 3)
                     : const EdgeInsets.only(top: 30, left: 10, right: 10)),
             child: FutureBuilder(
                 future: getOrCreateUserId(),
