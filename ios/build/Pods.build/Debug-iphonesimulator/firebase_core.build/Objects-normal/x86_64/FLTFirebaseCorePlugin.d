@@ -1,8 +1,8 @@
 dependencies: \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphonesimulator/firebase_core.build/module.modulemap \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebaseCorePlugin.m \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebaseCorePlugin.m \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Target\ Support\ Files/firebase_core/firebase_core-prefix.pch \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebaseCorePlugin.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebaseCorePlugin.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Modules/module.modulemap \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/Flutter.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterAppDelegate.h \
@@ -20,7 +20,7 @@ dependencies: \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
   /Users/halisia/Desktop/Developpement/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterViewController.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebasePlugin.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebasePlugin.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h \
@@ -30,5 +30,5 @@ dependencies: \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIROptions.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRTimestamp.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRVersion.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/messages.g.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebasePluginRegistry.h
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/messages.g.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebasePluginRegistry.h

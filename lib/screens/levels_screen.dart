@@ -3,22 +3,25 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hanoi_tower/components/level_item.dart';
-import 'package:hanoi_tower/main.dart';
 import 'package:hanoi_tower/services/firestore_service.dart';
 import 'package:hanoi_tower/services/level_service.dart';
 
 class LevelsScreen extends StatelessWidget {
   const LevelsScreen({super.key});
 
-  // getLevels() async {
-  //   CollectionReference achievementsCollection =
-  //       await FirebaseFirestore.instance.collection("Achievements").snapshots()
-  //   achievementsCollection.doc()
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          "Unlocked Levels",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 19),
+        ),
+        backgroundColor: const Color.fromARGB(255, 191, 143, 101),
+        leading: null,
+        automaticallyImplyLeading: false,
+      ),
       body: OrientationBuilder(builder: (context, orientation) {
         return Container(
           decoration: const BoxDecoration(
@@ -41,6 +44,7 @@ class LevelsScreen extends StatelessWidget {
             child: FutureBuilder(
                 future: getOrCreateUserId(),
                 builder: (context, snapshotID) {
+                  print(snapshotID.data);
                   return StreamBuilder(
                       stream: FirebaseFirestore.instance
                           .collection("users")

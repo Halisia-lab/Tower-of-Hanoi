@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hanoi_tower/screens/levels_screen.dart';
 import 'package:hanoi_tower/screens/splash_screen.dart';
 import 'package:hanoi_tower/services/firestore_service.dart';
+import 'package:hanoi_tower/services/level_service.dart';
 import 'package:hanoi_tower/services/route_service.dart';
 import 'package:hanoi_tower/services/sound_service.dart';
 import 'dart:math';
@@ -19,13 +20,13 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  checkAndInitializeLevel('Levels', '1', {
+  await getOrCreateUserId().then((id) =>  {
+    
+    checkAndInitializeLevel("levels", "1", {
     'attempts': 0,
     'time': 0,
     'level': 1,
-  });
-
-  getOrCreateUserId();
+  })});
 
   runApp(MaterialApp(
     initialRoute: '/splash',

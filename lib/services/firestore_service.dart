@@ -25,11 +25,18 @@ Future<String> getOrCreateUserId() async {
 Future<void> checkAndInitializeLevel(String collectionName, String documentId,
     Map<String, dynamic> defaultData) async {
   String uid = await getOrCreateUserId();
-  FirebaseFirestore.instance
-      .collection('users')
-      .doc(uid)
-      .collection('levels')
-      .doc(documentId);
+
+  final ref = FirebaseFirestore.instance.doc("/users/$uid/levels/1");
+  final snapshot = await ref.get();
+
+ if (!snapshot.exists) {
+    FirebaseFirestore.instance
+        .collection('users')
+        .doc(uid)
+        .collection('levels')
+        .doc(documentId)
+        .set(defaultData);
+ }
 }
 
 saveLevelData(int counter, int level, int time) async {

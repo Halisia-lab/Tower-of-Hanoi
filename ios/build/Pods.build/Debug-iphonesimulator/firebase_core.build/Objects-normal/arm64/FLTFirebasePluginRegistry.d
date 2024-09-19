@@ -1,9 +1,9 @@
 dependencies: \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphonesimulator/firebase_core.build/module.modulemap \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebasePluginRegistry.m \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebasePluginRegistry.m \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Target\ Support\ Files/firebase_core/firebase_core-prefix.pch \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebasePluginRegistry.h \
-  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.0/ios/Classes/FLTFirebasePlugin.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebasePluginRegistry.h \
+  /Users/halisia/.pub-cache/hosted/pub.dev/firebase_core-3.4.1/ios/Classes/FLTFirebasePlugin.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/build/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
   /Users/halisia/Desktop/Developpement/Projects/hanoi/hanoi_tower/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h \
