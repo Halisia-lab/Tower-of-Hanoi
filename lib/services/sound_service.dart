@@ -6,7 +6,7 @@ playWinSound() async {
         mode: PlayerMode.mediaPlayer);
   }
 
-  playCloseSound() async {
+  playLevelAlmostCompletedSound() async {
     final player = AudioPlayer();
     await player.play(AssetSource("sounds/close.mp3"),
         mode: PlayerMode.mediaPlayer);
