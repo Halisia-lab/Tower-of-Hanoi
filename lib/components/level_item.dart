@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hanoi_tower/main.dart';
+import 'package:hanoi_tower/screens/game_screen.dart';
 
 class LevelItem extends StatelessWidget {
   final int levelNumber;
@@ -15,7 +15,7 @@ class LevelItem extends StatelessWidget {
         context,
         MaterialPageRoute(
           builder: (context) =>
-              MyHomePage(title: "Level $levelNumber", level: levelNumber),
+              GameScreen(title: "Level $levelNumber", level: levelNumber),
         ),
       ), //, arguments: {'level': levelNumber}
       child: Padding(

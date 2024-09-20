@@ -10,13 +10,10 @@ Future<String> getOrCreateUserId() async {
   String? uid = prefs.getString('user_uid');
 
   if (uid == null) {
-    var uuid = Uuid();
+    var uuid = const Uuid();
     uid = uuid.v4();
 
     await prefs.setString('user_uid', uid);
-    print("UID généré : $uid");
-  } else {
-    print("UID existant récupéré : $uid");
   }
 
   return uid;
@@ -29,14 +26,14 @@ Future<void> checkAndInitializeLevel(String collectionName, String documentId,
   final ref = FirebaseFirestore.instance.doc("/users/$uid/levels/1");
   final snapshot = await ref.get();
 
- if (!snapshot.exists) {
+  if (!snapshot.exists) {
     FirebaseFirestore.instance
         .collection('users')
         .doc(uid)
         .collection('levels')
         .doc(documentId)
         .set(defaultData);
- }
+  }
 }
 
 saveLevelData(int counter, int level, int time) async {
@@ -46,8 +43,7 @@ saveLevelData(int counter, int level, int time) async {
       .doc(uid)
       .collection("levels")
       .doc(level.toString())
-      .set({"attempts": counter, "level": level, "time": time}).onError(
-          (e, _) => print("Error writing document: $e"));
+      .set({"attempts": counter, "level": level, "time": time});
 }
 
 makeLevelCompleted(int counter, int level, int time) async {
@@ -67,5 +63,13 @@ makeLevelCompletedWithExtraAttempts(int counter, int level, int time) async {
   } else {
     saveLevelData(counter, level, time);
   }
-  await playCloseSound();
+  await playLevelAlmostCompletedSound();
+}
+
+getUserLevelsList(String userId) {
+  FirebaseFirestore.instance
+      .collection("users")
+      .doc(userId)
+      .collection("levels")
+      .snapshots();
 }
